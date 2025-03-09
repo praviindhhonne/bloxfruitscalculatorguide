@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Blox Fruits Calculator: Calculate damage, compare fruits, and plan your leveling in Blox Fruits. Optimize your gameplay with this easy-to-use tool for Roblox players.">
+  <meta name="keywords" content="Blox Fruits, Blox Fruits Calculator, Blox Fruits Damage, Blox Fruits Leveling, Blox Fruits Comparison, Roblox">
+  <meta name="author" content="Your Name">
+  <title>Blox Fruits Calculator - Damage, Leveling, and Fruit Comparison Tool</title>
+  <link rel="canonical" href="https://bloxfruitscalculator.com">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+<!-- Navigation Menu -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Calculator</a></li>
+      <li><a href="top-5-best-fruits-in-blox-fruits.html">Top 5 Best Fruits</a></li>
+      <li><a href="how-to-level-up-fast.html">How to Level Up Fast</a></li>
+      <li><a href="damage-calculation-explained.html">Damage Calculation Explained</a></li>
+    </ul>
+  </nav>
+  <div class="container">
+
+
+    <h1>Blox Fruits Calculator</h1>
+    <p>Use this tool to calculate damage, compare fruits, and plan your leveling in Blox Fruits. Enter your stats and select a fruit to get started!</p>
+
+    <!-- Fruit Selector and Stat Inputs -->
+    <h2>Damage Calculator</h2>
+    <label for="fruit-type">Select Fruit:</label>
+    <select id="fruit-type">
+      <option value="Flame">Flame</option>
+      <option value="Ice">Ice</option>
+      <option value="Dark">Dark</option>
+      <option value="Light">Light</option>
+      <option value="Quake">Quake</option>
+    </select>
+
+    <label for="melee">Melee Stat:</label>
+    <input type="number" id="melee" placeholder="Enter Melee Stat">
+
+    <label for="defense">Defense Stat:</label>
+    <input type="number" id="defense" placeholder="Enter Defense Stat">
+
+    <label for="blox-fruit">Blox Fruit Stat:</label>
+    <input type="number" id="blox-fruit" placeholder="Enter Blox Fruit Stat">
+
+    <label for="gun">Gun Stat:</label>
+    <input type="number" id="gun" placeholder="Enter Gun Stat">
+
+    <button id="calculate-button">Calculate Damage</button>
+    <div class="result" id="damage-result"></div>
+
+    <!-- Leveling Guide -->
+    <h2>Leveling Guide</h2>
+    <label for="current-level">Current Level:</label>
+    <input type="number" id="current-level" placeholder="Enter Current Level">
+    <button id="leveling-button">Calculate XP/Beli Needed</button>
+    <div class="result" id="leveling-result"></div>
+
+    <!-- Comparison Tool -->
+    <h2>Fruit Comparison</h2>
+    <div class="comparison-section">
+      <div>
+        <label for="fruit1">Select Fruit 1:</label>
+        <select id="fruit1">
+          <option value="Flame">Flame</option>
+          <option value="Ice">Ice</option>
+          <option value="Dark">Dark</option>
+          <option value="Light">Light</option>
+          <option value="Quake">Quake</option>
+        </select>
+      </div>
+      <div>
+        <label for="fruit2">Select Fruit 2:</label>
+        <select id="fruit2">
+          <option value="Flame">Flame</option>
+          <option value="Ice">Ice</option>
+          <option value="Dark">Dark</option>
+          <option value="Light">Light</option>
+          <option value="Quake">Quake</option>
+        </select>
+      </div>
+    </div>
+    <button id="compare-button">Compare Fruits</button>
+    <div class="comparison-result" id="comparison-result"></div>
+
+    <!-- Blog Posts/Guides -->
+    <div class="blog-posts">
+      <h2>Blog Posts & Guides</h2>
+      <ul>
+        <li><a href="index.html">Calculator</a></li>
+      <li><a href="top-5-best-fruits-in-blox-fruits.html">Top 5 Best Fruits</a></li>
+      <li><a href="how-to-level-up-fast.html">How to Level Up Fast</a></li>
+      <li><a href="damage-calculation-explained.html">Damage Calculation Explained</a></li>
+      </ul>
+    </div>
+
+    <!-- FAQs -->
+    <div class="faq">
+      <h2>FAQs</h2>
+      <ul>
+        <li>
+          <strong>Q: How accurate is this calculator?</strong><br>
+          A: This calculator uses formulas based on community research and game mechanics. Results may vary slightly in-game.
+        </li>
+        <li>
+          <strong>Q: Can I use this tool on mobile?</strong><br>
+          A: Yes, the calculator is fully responsive and works on all devices.
+        </li>
+        <li>
+          <strong>Q: How often is the calculator updated?</strong><br>
+          A: We regularly update the calculator to reflect changes in Blox Fruits game mechanics.
+        </li>
+        <li>
+          <strong>Q: Is this calculator free to use?</strong><br>
+          A: Yes, this calculator is completely free for all Blox Fruits players.
+        </li>
+      </ul>
+    </div>
+
+    <!-- Limitations of Calculators -->
+    <div class="limitations">
+      <h2>Limitations of Calculators</h2>
+      <p>
+        While calculators are helpful tools, they are not definitive authorities. Several factors can influence the actual value of an item or outcome, including:
+      </p>
+      <ul>
+        <li><strong>Market Fluctuations:</strong> Item values can change rapidly due to game updates, new releases, and shifts in player demand.</li>
+        <li><strong>Personal Preference:</strong> Some items might hold more value to certain players based on their playstyle or collection goals.</li>
+        <li><strong>Trade Negotiation:</strong> The final value of a trade often depends on the negotiation between the players involved.</li>
+      </ul>
+      <p>
+        To get the most accurate results, use multiple calculators to compare outcomes. Additionally, consider factors like item rarity, demand, and your personal preferences. Stay updated on game changes and market trends to adjust your strategies accordingly.
+      </p>
+    </div>
+  </div>
+
+  <script>
+    // Damage Calculation
+    document.getElementById("calculate-button").addEventListener("click", () => {
+      const fruitType = document.getElementById("fruit-type").value;
+      const melee = parseInt(document.getElementById("melee").value) || 0;
+      const defense = parseInt(document.getElementById("defense").value) || 0;
+      const bloxFruit = parseInt(document.getElementById("blox-fruit").value) || 0;
+      const gun = parseInt(document.getElementById("gun").value) || 0;
+
+      const damage = calculateDamage(fruitType, melee, defense, bloxFruit, gun);
+      document.getElementById("damage-result").innerText = `Estimated Damage: ${damage}`;
+    });
+
+    function calculateDamage(fruitType, melee, defense, bloxFruit, gun) {
+      const damageFormulas = {
+        Flame: (melee + bloxFruit) * 1.2,
+        Ice: (melee + defense) * 1.1,
+        Dark: (melee + bloxFruit + gun) * 1.3,
+        Light: (melee + bloxFruit) * 1.15,
+        Quake: (melee + defense + bloxFruit) * 1.25,
+      };
+      return damageFormulas[fruitType] || 0;
+    }
+
+    // Leveling Guide
+    document.getElementById("leveling-button").addEventListener("click", () => {
+      const currentLevel = parseInt(document.getElementById("current-level").value) || 0;
+      const xpNeeded = (currentLevel * 100) + 500; // Example formula
+      const beliNeeded = (currentLevel * 200) + 1000; // Example formula
+      document.getElementById("leveling-result").innerText = `XP Needed: ${xpNeeded} | Beli Needed: ${beliNeeded}`;
+    });
+
+    // Comparison Tool
+    document.getElementById("compare-button").addEventListener("click", () => {
+      const fruit1 = document.getElementById("fruit1").value;
+      const fruit2 = document.getElementById("fruit2").value;
+      const comparison = compareFruits(fruit1, fruit2);
+      document.getElementById("comparison-result").innerText = comparison;
+    });
+
+    function compareFruits(fruit1, fruit2) {
+      const fruitStats = {
+        Flame: { Damage: "High", Defense: "Medium", Utility: "Low" },
+        Ice: { Damage: "Medium", Defense: "High", Utility: "Medium" },
+        Dark: { Damage: "Very High", Defense: "Low", Utility: "High" },
+        Light: { Damage: "Medium", Defense: "Medium", Utility: "High" },
+        Quake: { Damage: "High", Defense: "High", Utility: "Medium" },
+      };
+
+      const stats1 = fruitStats[fruit1];
+      const stats2 = fruitStats[fruit2];
+
+      return `${fruit1}: Damage - ${stats1.Damage}, Defense - ${stats1.Defense}, Utility - ${stats1.Utility}\n${fruit2}: Damage - ${stats2.Damage}, Defense - ${stats2.Defense}, Utility - ${stats2.Utility}`;
+    }
+  </script>
+</body>
+</html>
