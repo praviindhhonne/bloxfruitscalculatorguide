@@ -74,6 +74,14 @@
       color: #ccc;
     }
 
+    a{
+      color: #ff6f61;
+      text-decoration: none;
+    }
+    a:hover{
+      text-decoration: underline;
+    }
+
     input, select, button {
       width: 100%;
       padding: 10px;
