@@ -93,6 +93,7 @@
       font-size: 16px;
       box-sizing: border-box;
     }
+    
 
     button {
       background: #ff6f61;
@@ -179,3 +180,35 @@
         align-items: center;
       }
     }
+
+    /* Mobile Input Fixes */
+input, select {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box; /* Includes padding in width calculation */
+  padding: 12px 15px; /* Ample touch target */
+  margin: 8px 0;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: #fff;
+}
+
+
+/* Special fix for iOS */
+@supports (-webkit-touch-callout: none) {
+  input, select {
+    padding: 12px 20px; /* Extra right padding for iOS */
+  }
+}
+
+/* Container padding for mobile */
+@media (max-width: 600px) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  .calculator-input {
+    margin-right: 15px; /* Extra right margin for inputs */
+  }
+}

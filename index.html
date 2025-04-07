@@ -5,13 +5,166 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
-    content="Blox Fruits Calculator: Calculate damage, compare fruits, and plan your leveling in Blox Fruits. Optimize your gameplay with this easy-to-use tool for Roblox players.">
+    content="Blox Fruits Calculator: Calculate damage, compare fruits, find best swords, and level up fast in Blox Fruits. Complete Roblox gameplay guide with PvP strategies.">
   <meta name="keywords"
-    content="Blox Fruits, Blox Fruits Calculator, Blox Fruits Damage, Blox Fruits Leveling, Blox Fruits Comparison, Roblox">
-  <meta name="author" content="Your Name">
-  <title>Blox Fruits Calculator - Damage, Leveling, and Fruit Comparison Tool</title>
+    content="Blox Fruits, Blox Fruits Calculator, Blox Fruits Damage, Best Swords, Beli Farming, PvP Strategies, Roblox">
+  <meta name="author" content="Blox Fruits Expert">
+  <title>Blox Fruits Calculator - Ultimate Gameplay Guide</title>
   <link rel="canonical" href="https://bloxfruitscalculator.com">
-  <link href="style.css" rel="stylesheet">
+  <style>
+    /* ======= NEW VISUAL STYLES ======= */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .hero {
+      position: relative;
+      margin: 20px 0;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .hero-text {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      color: white;
+      text-shadow: 1px 1px 3px black;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .content-section {
+      border-top: 3px solid #FF6B00;
+      padding: 25px 0;
+      margin: 30px 0;
+    }
+
+    .result, .comparison-result {
+      background: #F8F8F8;
+      border-left: 4px solid #FF6B00;
+      padding: 15px;
+      margin: 15px 0;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .tip {
+      background: #FFF4E5;
+      padding: 12px;
+      border-radius: 4px;
+      margin: 15px 0;
+    }
+
+    h2 {
+      color: #2c3e50;
+    }
+
+    h3 {
+      color: #FF6B00;
+      margin-top: 20px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    /* ======= CALCULATOR STYLES ======= */
+    .calculator-input {
+      margin: 15px 0;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      max-width: 400px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background: #FF6B00;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    button:hover {
+      background: #e05d00;
+    }
+
+    .comparison-section {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .comparison-section > div {
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .quick-links {
+      background: #f5f5f5;
+      padding: 20px;
+      border-radius: 8px;
+      margin: 30px 0;
+    }
+
+    .quick-links ul {
+      columns: 2;
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .quick-links li {
+      margin-bottom: 10px;
+    }
+
+    .quick-links a {
+      color: #FF6B00;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      padding: 20px;
+      border-top: 1px solid #eee;
+    }
+
+    footer a {
+      color: #FF6B00;
+      margin: 0 10px;
+    }
+
+    @media (max-width: 600px) {
+      .quick-links ul {
+        columns: 1;
+      }
+    }
+  </style>
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-LZEW4SCX8B"></script>
@@ -19,370 +172,194 @@
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'G-LZEW4SCX8B');
   </script>
 
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5766193161875467"
     crossorigin="anonymous"></script>
-
 </head>
 
 <body>
   <div class="container">
-    <h1>Blox Fruits Calculator</h1>
-    <p>Use this tool to calculate damage, compare fruits, and plan your leveling in Blox Fruits. Enter your stats and
-      select a fruit to get started!</p>
+    <!-- Hero Banner -->
+    <div class="hero">
+      <!-- Placeholder image - replace with your optimized image -->
+      <!-- <img src="Blox-Fruits-Characters-banner.png" 
+           alt="Blox Fruits Characters" 
+           width="100%" 
+           loading="lazy">
+      <p class="hero-text">Master Your Gameplay with Data-Driven Strategies!</p> -->
+    </div>
 
-    <!-- Fruit Selector and Stat Inputs -->
-    <h2>Damage Calculator</h2>
-    <label for="fruit-type">Select Fruit:</label>
-    <select id="fruit-type">
-      <option value="Flame">Flame</option>
-      <option value="Ice">Ice</option>
-      <option value="Dark">Dark</option>
-      <option value="Light">Light</option>
-      <option value="Quake">Quake</option>
-    </select>
+    <h1>Blox Fruits Ultimate Guide</h1>
+    <p>Use these tools and guides to calculate damage, compare fruits, find the best swords, and dominate in PvP. Updated for the latest Blox Fruits meta!</p>
 
-    <label for="melee">Melee Stat:</label>
-    <input type="number" id="melee" placeholder="Enter Melee Stat">
+    <!-- Damage Calculator -->
+    <div class="content-section">
+      <h2>Damage Calculator</h2>
+      <div class="calculator-input">
+        <label for="fruit-type">Select Fruit:</label>
+        <select id="fruit-type">
+          <option value="Flame">🔥 Flame</option>
+          <option value="Ice">❄️ Ice</option>
+          <option value="Dark">🌑 Dark</option>
+          <option value="Light">✨ Light</option>
+          <option value="Quake">🌋 Quake</option>
+        </select>
+      </div>
 
-    <label for="defense">Defense Stat:</label>
-    <input type="number" id="defense" placeholder="Enter Defense Stat">
+      <div class="calculator-input">
+        <label for="melee">Melee Stat:</label>
+        <input type="number" id="melee" placeholder="Enter Melee Stat">
+      </div>
 
-    <label for="blox-fruit">Blox Fruit Stat:</label>
-    <input type="number" id="blox-fruit" placeholder="Enter Blox Fruit Stat">
+      <div class="calculator-input">
+        <label for="defense">Defense Stat:</label>
+        <input type="number" id="defense" placeholder="Enter Defense Stat">
+      </div>
 
-    <label for="gun">Gun Stat:</label>
-    <input type="number" id="gun" placeholder="Enter Gun Stat">
+      <div class="calculator-input">
+        <label for="blox-fruit">Blox Fruit Stat:</label>
+        <input type="number" id="blox-fruit" placeholder="Enter Blox Fruit Stat">
+      </div>
 
-    <button id="calculate-button">Calculate Damage</button>
-    <div class="result" id="damage-result"></div>
+      <div class="calculator-input">
+        <label for="gun">Gun Stat:</label>
+        <input type="number" id="gun" placeholder="Enter Gun Stat">
+      </div>
+
+      <button id="calculate-button">Calculate Damage</button>
+      <div class="result" id="damage-result"></div>
+
+      <div class="tip">
+        <strong>Pro Tip:</strong> Combine high Blox Fruit stats with Dark or Light fruits for maximum damage output!
+      </div>
+    </div>
 
     <!-- Leveling Guide -->
-    <h2>Leveling Guide</h2>
-    <label for="current-level">Current Level:</label>
-    <input type="number" id="current-level" placeholder="Enter Current Level">
-    <button id="leveling-button">Calculate XP/Beli Needed</button>
-    <div class="result" id="leveling-result"></div>
-
-    <!-- Comparison Tool -->
-    <h2>Fruit Comparison</h2>
-    <div class="comparison-section">
-      <div>
-        <label for="fruit1">Select Fruit 1:</label>
-        <select id="fruit1">
-          <option value="Flame">Flame</option>
-          <option value="Ice">Ice</option>
-          <option value="Dark">Dark</option>
-          <option value="Light">Light</option>
-          <option value="Quake">Quake</option>
-        </select>
+    <div class="content-section">
+      <h2>Leveling Guide</h2>
+      <div class="calculator-input">
+        <label for="current-level">Current Level:</label>
+        <input type="number" id="current-level" placeholder="Enter Current Level">
       </div>
-      <div>
-        <label for="fruit2">Select Fruit 2:</label>
-        <select id="fruit2">
-          <option value="Flame">Flame</option>
-          <option value="Ice">Ice</option>
-          <option value="Dark">Dark</option>
-          <option value="Light">Light</option>
-          <option value="Quake">Quake</option>
-        </select>
-      </div>
-    </div>
-    <button id="compare-button">Compare Fruits</button>
-    <div class="comparison-result" id="comparison-result"></div>
-
-    <!-- Additional Content Sections -->
-    <div id="top-fruits" class="content-section">
-      <h2>Top 5 Best Fruits in Blox Fruits</h2>
-      <p>Choosing the right Blox Fruit can significantly impact your gameplay experience. Here are the top 5 fruits
-        currently in the game:</p>
-
-      <h3>1. Dark Fruit</h3>
-      <p>The Dark Fruit is considered one of the best fruits in the game due to its incredible damage output and
-        mobility. Its moveset includes:</p>
-      <ul>
-        <li>Dark Flight: Allows you to fly and escape dangerous situations</li>
-        <li>Dark Blade: High-damage melee attack</li>
-        <li>Black Hole: Powerful AoE attack that pulls enemies in</li>
-      </ul>
-
-      <h3>2. Light Fruit</h3>
-      <p>Light Fruit is excellent for both PvP and grinding due to its speed and ranged attacks:</p>
-      <ul>
-        <li>Light Speed: Incredible movement ability</li>
-        <li>Heavenly Light: Strong ranged attack</li>
-        <li>Flash Strike: Quick melee attack with good damage</li>
-      </ul>
-
-      <h3>3. Quake Fruit</h3>
-      <p>The Quake Fruit offers excellent crowd control and defense:</p>
-      <ul>
-        <li>Quake Punch: High damage with knockback</li>
-        <li>Tremor: AoE stun effect</li>
-        <li>Seismic Shift: Defensive ability that reduces incoming damage</li>
-      </ul>
-
-      <h3>4. Flame Fruit</h3>
-      <p>Flame Fruit provides consistent damage and good mobility:</p>
-      <ul>
-        <li>Fire Flight: Flying ability with fire trail</li>
-        <li>Fire Fist: Strong melee attack</li>
-        <li>Inferno: Persistent AoE damage</li>
-      </ul>
-
-      <h3>5. Ice Fruit</h3>
-      <p>Ice Fruit is great for freezing enemies and controlling battles:</p>
-      <ul>
-        <li>Ice Flight: Flying ability that leaves a freezing trail</li>
-        <li>Ice Spear: Ranged attack that can freeze</li>
-        <li>Glacier: Creates defensive ice walls</li>
-      </ul>
+      <button id="leveling-button">Calculate XP/Beli Needed</button>
+      <div class="result" id="leveling-result"></div>
     </div>
 
-    <div id="level-up" class="content-section">
-      <h2>How to Level Up Fast in Blox Fruits</h2>
-      <p>Leveling up quickly in Blox Fruits requires strategy and efficient grinding. Follow these tips to maximize your
-        XP gains:</p>
-
-      <h3>1. Choose the Right Fruit for Grinding</h3>
-      <p>Some fruits are better suited for grinding than others. Fruits with good AoE (Area of Effect) attacks like
-        Dark, Light, or Quake can help you defeat multiple enemies quickly.</p>
-
-      <h3>2. Fight Enemies Slightly Above Your Level</h3>
-      <p>Target enemies that give you the most XP without being too difficult to defeat. A good rule is to fight enemies
-        5-10 levels above your current level.</p>
-
-      <h3>3. Complete Quests Efficiently</h3>
-      <p>Focus on quests that offer the best XP/time ratio. Some quests may give more XP but take much longer to
-        complete.</p>
-
-      <h3>4. Use XP Boosts</h3>
-      <p>Take advantage of:</p>
-      <ul>
-        <li>Double XP events</li>
-        <li>XP codes (when available)</li>
-        <li>XP-boosting accessories</li>
-      </ul>
-
-      <h3>5. Optimize Your Stat Distribution</h3>
-      <p>For efficient grinding, focus on:</p>
-      <ul>
-        <li>Melee or Blox Fruit stats (depending on your fruit)</li>
-        <li>Enough Defense to survive</li>
-        <li>Some points in Energy for mobility</li>
-      </ul>
-
-      <h3>6. Party Up with Other Players</h3>
-      <p>Teaming up with other players can help you take down stronger enemies faster and share XP gains.</p>
-    </div>
-
-    <div id="damage-explained" class="content-section">
-      <h2>Damage Calculation Explained</h2>
-      <p>Understanding how damage is calculated in Blox Fruits can help you optimize your build and playstyle.</p>
-
-      <h3>Basic Damage Formula</h3>
-      <p>The basic damage formula for most attacks is:</p>
-      <p><strong>Damage = (Base Attack + Stat Bonus) × Move Multiplier × Defense Reduction</strong></p>
-
-      <h3>Stat Contributions</h3>
-      <p>Different stats affect different types of attacks:</p>
-      <ul>
-        <li><strong>Melee:</strong> Affects sword and fist attacks</li>
-        <li><strong>Blox Fruit:</strong> Affects fruit ability damage</li>
-        <li><strong>Gun:</strong> Affects gun damage</li>
-        <li><strong>Defense:</strong> Reduces incoming damage</li>
-      </ul>
-
-      <h3>Fruit-Specific Modifiers</h3>
-      <p>Each fruit has unique modifiers that affect its damage output:</p>
-      <ul>
-        <li><strong>Flame:</strong> 1.2x multiplier to fire-based attacks</li>
-        <li><strong>Ice:</strong> 1.1x multiplier with chance to freeze</li>
-        <li><strong>Dark:</strong> 1.3x multiplier to dark-based attacks</li>
-        <li><strong>Light:</strong> 1.15x multiplier to light-based attacks</li>
-        <li><strong>Quake:</strong> 1.25x multiplier with AoE stun chance</li>
-      </ul>
-
-      <h3>Defense Calculation</h3>
-      <p>Defense reduces incoming damage by a percentage. The formula is roughly:</p>
-      <p><strong>Damage Taken = Raw Damage × (100 / (100 + Defense))</strong></p>
-      <p>This means higher defense gives diminishing returns but remains valuable.</p>
-
-      <h3>Critical Hits</h3>
-      <p>Some attacks can critically hit for 1.5x-2x damage. Critical chance is affected by:</p>
-      <ul>
-        <li>Certain fruits (like Dark)</li>
-        <li>Accessories</li>
-        <li>Random chance</li>
-      </ul>
-    </div>
-
-    <div class="quick-links">
-      <h2>Quick Links</h2>
-      <ul>
-        <li><a href="#top-fruits">Top 5 Best Fruits</a></li>
-        <li><a href="#level-up">How to Level Up Fast</a></li>
-        <li><a href="#damage-explained">Damage Calculation Explained</a></li>
-        <li><a href="#best-swords">Best Swords</a></li> <!-- NEW -->
-        <li><a href="#beli-guide">Farming Beli Guide</a></li> <!-- NEW -->
-        <li><a href="#pvp-strategies">PvP Strategies</a></li> <!-- NEW -->
-      </ul>
-    </div>
-
-    <!-- ======= NEW CONTENT ADDED ======= -->
+    <!-- Best Swords Section -->
     <div id="best-swords" class="content-section">
-      <h2>Best Swords in Blox Fruits</h2>
-      <p>Choosing the right sword is crucial for melee combat in Blox Fruits. Here are the top swords ranked by damage
-        and utility:</p>
-
+      <h2>⚔️ Best Swords in Blox Fruits</h2>
+      <p>Choosing the right sword is crucial for melee combat. Here are the top swords ranked by damage and utility:</p>
+      
       <h3>1. Dark Blade</h3>
-      <p><strong>Why it’s #1:</strong> Highest base damage + bleed effect. Works exceptionally well with Dark Fruit.</p>
+      <p><strong>Why it's #1:</strong> Highest base damage + bleed effect. Perfect synergy with Dark Fruit.</p>
       <ul>
-        <li><strong>Obtain:</strong> Purchase from the Sword Dealer for 1.2M Beli or trade.</li>
-        <li><strong>Combo Potential:</strong> High (works with teleport moves).</li>
+        <li><strong>Obtain:</strong> Purchase for 1.2M Beli or trade</li>
+        <li><strong>Best Combo:</strong> Black Hole (stun) → Dark Blade spam</li>
       </ul>
 
       <h3>2. Pole (Second Form)</h3>
-      <p><strong>Why it’s great:</strong> Insane range and knockback. Ideal for PvP.</p>
+      <p><strong>Range King:</strong> Insane reach and knockback. Dominates in PvP.</p>
       <ul>
-        <li><strong>Obtain:</strong> Upgrade Pole (First Form) at the Green Zone.</li>
-        <li><strong>Best For:</strong> Crowd control and hit-and-run tactics.</li>
+        <li><strong>Obtain:</strong> Upgrade Pole (First Form) at Green Zone</li>
+        <li><strong>Hidden Tech:</strong> Animation cancel for faster attacks</li>
       </ul>
 
-      <h3>3. Saber</h3>
-      <p><strong>Budget King:</strong> Easy to obtain early-game with solid damage.</p>
-      <ul>
-        <li><strong>Obtain:</strong> Complete the Saber Expert quest.</li>
-        <li><strong>Hidden Perk:</strong> Fast attack speed.</li>
-      </ul>
+      <div class="tip">
+        <strong>Sword Mastery:</strong> Practice combos in 1v1 servers before real fights!
+      </div>
     </div>
 
+    <!-- Farming Beli Guide -->
     <div id="beli-guide" class="content-section">
-      <h2>Farming Beli Guide</h2>
-      <p>Beli is essential for buying fruits, swords, and accessories. Here’s how to farm it efficiently:</p>
-
-      <h3>1. Boss Farming</h3>
-      <p><strong>Best Bosses:</strong> Smoke Admiral (25k Beli), Dark Beard (30k Beli).</p>
+      <h2>💰 Farming Beli Guide</h2>
+      <p>Maximize your Beli income with these proven methods:</p>
+      
+      <h3>1. Boss Farming (Fastest Method)</h3>
       <ul>
-        <li>Use a fruit with high burst damage (Dark/Light).</li>
-        <li>Server-hop to respawn bosses faster.</li>
+        <li><strong>Best Targets:</strong> Smoke Admiral (25k), Dark Beard (30k)</li>
+        <li><strong>Strategy:</strong> Server-hop for quick respawns</li>
+        <li><strong>Recommended Fruits:</strong> Dark (burst), Light (mobility)</li>
       </ul>
 
-      <h3>2. Sea Beasts</h3>
-      <p><strong>Reward:</strong> 10k-20k Beli per kill + chance for rare drops.</p>
+      <h3>2. Sea Beast Hunting</h3>
       <ul>
-        <li>Requires a boat (use a team for faster kills).</li>
-        <li>Best fruits: Ice (freeze) or Quake (AoE).</li>
+        <li><strong>Reward:</strong> 10k-20k Beli + rare drops</li>
+        <li><strong>Team Setup:</strong> 1 Ice user + 2 DPS</li>
+        <li><strong>Boat Tip:</strong> Use Frigate for durability</li>
       </ul>
 
-      <h3>3. Factory Grind</h3>
-      <p><strong>Location:</strong> Pirate Village (5k Beli per chest).</p>
-      <ul>
-        <li>Use Observation Haki to detect chests.</li>
-        <li>Optimize route for minimal downtime.</li>
-      </ul>
+      <div class="tip">
+        <strong>Money Hack:</strong> Activate 2x Beli codes during boss farming sessions!
+      </div>
     </div>
 
+    <!-- PvP Strategies -->
     <div id="pvp-strategies" class="content-section">
-      <h2>PvP Strategies for Dominating Battles</h2>
-      <p>Master these tactics to win more fights in Blox Fruits:</p>
-
+      <h2>⚡ PvP Combat Strategies</h2>
+      <p>Dominate battles with these advanced techniques:</p>
+      
       <h3>1. Fruit Combos</h3>
-      <p><strong>Example (Dark Fruit):</strong> Black Hole (stun) → Dark Blade (burst damage).</p>
       <ul>
-        <li>Light Fruit: Heavenly Light (range) → Flash Strike (finisher).</li>
-        <li>Quake: Tremor (stun) → Quake Punch (knockback).</li>
+        <li><strong>Dark Fruit:</strong> Black Hole → Teleport → Dark Blade</li>
+        <li><strong>Light Fruit:</strong> Heavenly Light → Flash Strike → Repeat</li>
+        <li><strong>Quake:</strong> Tremor (stun) → Quake Punch (knockback)</li>
       </ul>
 
-      <h3>2. Sword Canceling</h3>
-      <p><strong>Advanced Tech:</strong> Cancel sword animations with dash/teleport to chain attacks faster.</p>
+      <h3>2. Movement Techs</h3>
       <ul>
-        <li>Works best with Saber or Pole.</li>
-        <li>Practice in 1v1 servers.</li>
+        <li><strong>Soru Canceling:</strong> Dash mid-combo to reset animations</li>
+        <li><strong>Terrain Abuse:</strong> Fight near walls to limit enemy dodging</li>
       </ul>
 
-      <h3>3. Defense Stacking</h3>
-      <p><strong>Survival Tip:</strong> Allocate 50% of stats to Defense if using a glass cannon fruit (e.g., Dark).</p>
-      <ul>
-        <li>Pair with Dragon Helmet (+Defense accessory).</li>
-      </ul>
+      <div class="tip">
+        <strong>PvP Secret:</strong> 60% Defense stat allocation prevents one-shot kills!
+      </div>
     </div>
-    <!-- ======= END NEW CONTENT ======= -->
 
-    <!-- FAQs -->
-    <div class="faq">
-      <h2>FAQs</h2>
+    <!-- Quick Links -->
+    <div class="quick-links">
+      <h2>Quick Navigation</h2>
       <ul>
-        <li>
-          <strong>Q: How accurate is this calculator?</strong><br>
-          A: This calculator uses formulas based on community research and game mechanics. Results may vary slightly
-          in-game.
-        </li>
-        <li>
-          <strong>Q: Can I use this tool on mobile?</strong><br>
-          A: Yes, the calculator is fully responsive and works on all devices.
-        </li>
-        <li>
-          <strong>Q: How often is the calculator updated?</strong><br>
-          A: We regularly update the calculator to reflect changes in Blox Fruits game mechanics.
-        </li>
-        <li>
-          <strong>Q: Is this calculator free to use?</strong><br>
-          A: Yes, this calculator is completely free for all Blox Fruits players.
-        </li>
+        <li><a href="#best-swords">Best Swords Guide</a></li>
+        <li><a href="#beli-guide">Beli Farming</a></li>
+        <li><a href="#pvp-strategies">PvP Strategies</a></li>
+        <li><a href="#damage-explained">Damage Math</a></li>
       </ul>
     </div>
 
-    <!-- Limitations of Calculators -->
-    <div class="limitations">
-      <h2>Limitations of Calculators</h2>
-      <p>
-        While calculators are helpful tools, they are not definitive authorities. Several factors can influence the
-        actual value of an item or outcome, including:
-      </p>
-      <ul>
-        <li><strong>Market Fluctuations:</strong> Item values can change rapidly due to game updates, new releases, and
-          shifts in player demand.</li>
-        <li><strong>Personal Preference:</strong> Some items might hold more value to certain players based on their
-          playstyle or collection goals.</li>
-        <li><strong>Trade Negotiation:</strong> The final value of a trade often depends on the negotiation between the
-          players involved.</li>
-      </ul>
-      <p>
-        To get the most accurate results, use multiple calculators to compare outcomes. Additionally, consider factors
-        like item rarity, demand, and your personal preferences. Stay updated on game changes and market trends to
-        adjust your strategies accordingly.
-      </p>
-    </div>
+    <!-- Footer -->
     <footer>
       <p>© 2023 Blox Fruits Calculator. Not affiliated with Roblox.</p>
-      <a href="privacy.html">Privacy Policy</a> | <a href="#contact">Contact</a>
+      <a href="privacy.html">Privacy Policy</a> | 
+      <a href="mailto:contact@bloxfruitscalculator.com">Contact</a>
     </footer>
   </div>
 
   <script>
     // Damage Calculation
     document.getElementById("calculate-button").addEventListener("click", () => {
-      const fruitType = document.getElementById("fruit-type").value;
+      const fruitType = document.getElementById("fruit-type").value.replace(/[^a-zA-Z]/g, '');
       const melee = parseInt(document.getElementById("melee").value) || 0;
       const defense = parseInt(document.getElementById("defense").value) || 0;
       const bloxFruit = parseInt(document.getElementById("blox-fruit").value) || 0;
       const gun = parseInt(document.getElementById("gun").value) || 0;
 
       const damage = calculateDamage(fruitType, melee, defense, bloxFruit, gun);
-      document.getElementById("damage-result").innerText = `Estimated Damage: ${damage}`;
+      document.getElementById("damage-result").innerHTML = `
+        <strong>Estimated Damage Range:</strong> ${damage - 50}-${damage + 50} 
+        <br><small>(Actual damage varies based on enemy defense)</small>
+      `;
     });
 
     function calculateDamage(fruitType, melee, defense, bloxFruit, gun) {
       const damageFormulas = {
-        Flame: (melee + bloxFruit) * 1.2,
-        Ice: (melee + defense) * 1.1,
-        Dark: (melee + bloxFruit + gun) * 1.3,
-        Light: (melee + bloxFruit) * 1.15,
-        Quake: (melee + defense + bloxFruit) * 1.25,
+        Flame: Math.floor((melee * 0.7 + bloxFruit * 1.5) * 1.2),
+        Ice: Math.floor((melee * 0.5 + defense * 0.8 + bloxFruit * 1.2) * 1.1),
+        Dark: Math.floor((melee * 0.8 + bloxFruit * 1.7 + gun * 0.5) * 1.3),
+        Light: Math.floor((melee * 0.6 + bloxFruit * 1.6) * 1.15),
+        Quake: Math.floor((melee * 0.9 + defense * 0.5 + bloxFruit * 1.4) * 1.25),
       };
       return damageFormulas[fruitType] || 0;
     }
@@ -390,34 +367,13 @@
     // Leveling Guide
     document.getElementById("leveling-button").addEventListener("click", () => {
       const currentLevel = parseInt(document.getElementById("current-level").value) || 0;
-      const xpNeeded = (currentLevel * 100) + 500; // Example formula
-      const beliNeeded = (currentLevel * 200) + 1000; // Example formula
-      document.getElementById("leveling-result").innerText = `XP Needed: ${xpNeeded} | Beli Needed: ${beliNeeded}`;
+      const xpNeeded = Math.floor(Math.pow(currentLevel, 1.8) * 100 + 500);
+      const beliNeeded = Math.floor(currentLevel * 250 * (currentLevel / 50 + 1));
+      document.getElementById("leveling-result").innerHTML = `
+        <strong>XP Needed:</strong> ${xpNeeded.toLocaleString()}<br>
+        <strong>Beli Needed:</strong> ${beliNeeded.toLocaleString()}
+      `;
     });
-
-    // Comparison Tool
-    document.getElementById("compare-button").addEventListener("click", () => {
-      const fruit1 = document.getElementById("fruit1").value;
-      const fruit2 = document.getElementById("fruit2").value;
-      const comparison = compareFruits(fruit1, fruit2);
-      document.getElementById("comparison-result").innerText = comparison;
-    });
-
-    function compareFruits(fruit1, fruit2) {
-      const fruitStats = {
-        Flame: { Damage: "High", Defense: "Medium", Utility: "Low" },
-        Ice: { Damage: "Medium", Defense: "High", Utility: "Medium" },
-        Dark: { Damage: "Very High", Defense: "Low", Utility: "High" },
-        Light: { Damage: "Medium", Defense: "Medium", Utility: "High" },
-        Quake: { Damage: "High", Defense: "High", Utility: "Medium" },
-      };
-
-      const stats1 = fruitStats[fruit1];
-      const stats2 = fruitStats[fruit2];
-
-      return `${fruit1}: Damage - ${stats1.Damage}, Defense - ${stats1.Defense}, Utility - ${stats1.Utility}\n${fruit2}: Damage - ${stats2.Damage}, Defense - ${stats2.Defense}, Utility - ${stats2.Utility}`;
-    }
   </script>
 </body>
-
 </html>
